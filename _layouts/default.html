@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  {% seo title=false %}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">T</span>
+        <span class="brand-name">Tech<strong>AIML</strong></span>
+      </a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span></label>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a>
+        <a href="{{ '/services/' | relative_url }}" {% if page.url contains '/services' %}class="active"{% endif %}>Services</a>
+        <a href="{{ '/bolusai/' | relative_url }}" {% if page.url contains '/bolusai' %}class="active"{% endif %}>BolusAI</a>
+        <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>About</a>
+        <a href="{{ '/contact/' | relative_url }}" class="nav-cta">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Tech<strong>AIML</strong> Ltd</p>
+        <p>Smart IoT solutions for agriculture.<br>Precision livestock monitoring, made simple.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="{{ '/services/' | relative_url }}">Services</a>
+        <a href="{{ '/bolusai/' | relative_url }}">BolusAI</a>
+        <a href="{{ '/about/' | relative_url }}">About us</a>
+        <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <p>United Kingdom</p>
+        <a href="{{ '/contact/' | relative_url }}">Send us a message →</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© {{ 'now' | date: '%Y' }} TechAIML Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
