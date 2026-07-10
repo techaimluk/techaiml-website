@@ -1,0 +1,310 @@
+---
+layout: default
+title: Dashboard
+permalink: /dashboard/
+description: See how farmers view BolusAI herd data — live dashboards with heat alerts, temperature charts and herd health on mobile, tablet and desktop.
+---
+
+<style>
+/* Dashboard showcase styles (scoped to this page) */
+.device { margin: 0 auto; }
+.device-desktop {
+  max-width: 860px; background: #fff; border: 1px solid var(--line);
+  border-radius: 14px; box-shadow: var(--shadow); overflow: hidden;
+}
+.browser-bar {
+  display: flex; align-items: center; gap: 8px;
+  background: #eef3f9; padding: 10px 16px; border-bottom: 1px solid var(--line);
+}
+.browser-bar .dot { width: 11px; height: 11px; border-radius: 50%; }
+.browser-bar .url {
+  flex: 1; margin-left: 10px; background: #fff; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 0.78rem; color: var(--grey);
+  padding: 4px 14px; max-width: 340px;
+}
+.dash-body { padding: 22px; background: #f7fafd; }
+.dash-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.dash-title h4 { font-size: 1rem; color: var(--ink); }
+.dash-title span { font-size: 0.78rem; color: var(--grey); }
+.kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 14px; }
+.kpi {
+  background: #fff; border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 14px;
+}
+.kpi .kpi-label { font-size: 0.72rem; color: var(--grey); text-transform: uppercase; letter-spacing: 0.04em; }
+.kpi .kpi-value { font-size: 1.35rem; font-weight: 700; color: var(--ink); }
+.kpi .kpi-value.alert { color: #d64545; }
+.kpi .kpi-value.ok { color: #2e9e5b; }
+.kpi .kpi-sub { font-size: 0.72rem; color: var(--grey); }
+.chart-row { display: grid; grid-template-columns: 1.6fr 1fr; gap: 12px; }
+.chart-card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 14px; }
+.chart-card h5 { font-size: 0.85rem; color: var(--ink); margin-bottom: 8px; }
+.chart-card svg { width: 100%; height: auto; display: block; }
+.legend { display: flex; gap: 14px; font-size: 0.72rem; color: var(--grey); margin-top: 6px; flex-wrap: wrap; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+
+.device-duo { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: end; max-width: 860px; margin: 0 auto; }
+.device-tablet {
+  background: #1a2433; border-radius: 22px; padding: 14px; box-shadow: var(--shadow);
+}
+.device-tablet .screen { background: #f7fafd; border-radius: 12px; padding: 16px; }
+.device-phone {
+  background: #1a2433; border-radius: 30px; padding: 12px 10px; box-shadow: var(--shadow);
+  max-width: 270px; margin: 0 auto; position: relative;
+}
+.device-phone::before {
+  content: ""; position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+  width: 84px; height: 16px; background: #1a2433; border-radius: 0 0 12px 12px; z-index: 2;
+}
+.device-phone .screen { background: #f7fafd; border-radius: 20px; padding: 26px 12px 14px; }
+.notif {
+  display: flex; gap: 10px; background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 10px 12px; margin-bottom: 10px; align-items: flex-start;
+}
+.notif .n-icon {
+  width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center; font-size: 1rem;
+}
+.notif .n-icon.heat { background: #fdeaea; }
+.notif .n-icon.temp { background: #fff3e2; }
+.notif .n-icon.ok { background: #e7f6ec; }
+.notif h6 { font-size: 0.78rem; color: var(--ink); margin: 0; }
+.notif p { font-size: 0.7rem; color: var(--grey); margin: 2px 0 0; line-height: 1.4; }
+.notif time { font-size: 0.62rem; color: #9aa7b8; margin-left: auto; white-space: nowrap; }
+.screen-title { font-size: 0.8rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+
+@media (max-width: 860px) {
+  .kpi-row { grid-template-columns: repeat(2, 1fr); }
+  .chart-row { grid-template-columns: 1fr; }
+  .device-duo { grid-template-columns: 1fr; align-items: center; }
+}
+</style>
+
+<section class="page-head">
+  <div class="container">
+    <h1>Your herd's data, on any device</h1>
+    <p>BolusAI turns capsule readings into a clear, live dashboard. Check your herd from the kitchen table, the milking parlour or the field — phone, tablet or desktop, no software to install.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>On the desktop — the full picture</h2>
+      <p>A live overview of every animal: temperature trends, activity, drinking behaviour and alerts, updated around the clock.</p>
+    </div>
+
+    <div class="device device-desktop">
+      <div class="browser-bar">
+        <span class="dot" style="background:#f26d6d"></span>
+        <span class="dot" style="background:#f2c94c"></span>
+        <span class="dot" style="background:#5fc77e"></span>
+        <span class="url">app.techaiml.co.uk/dashboard</span>
+      </div>
+      <div class="dash-body">
+        <div class="dash-title">
+          <h4>Herd overview — Willow Farm</h4>
+          <span>Last sync: 2 min ago</span>
+        </div>
+        <div class="kpi-row">
+          <div class="kpi"><div class="kpi-label">Cows monitored</div><div class="kpi-value">148</div><div class="kpi-sub">All capsules online</div></div>
+          <div class="kpi"><div class="kpi-label">Active alerts</div><div class="kpi-value alert">2</div><div class="kpi-sub">1 heat · 1 temperature</div></div>
+          <div class="kpi"><div class="kpi-label">In heat (24h)</div><div class="kpi-value">3</div><div class="kpi-sub">Optimal AI window open</div></div>
+          <div class="kpi"><div class="kpi-label">Herd status</div><div class="kpi-value ok">96%</div><div class="kpi-sub">Healthy</div></div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-card">
+            <h5>Rumen temperature — Cow #247 (7 days)</h5>
+            <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Line chart of rumen temperature over seven days with a heat event spike on Friday">
+              <g stroke="#e3e9f1" stroke-width="1">
+                <line x1="40" y1="20" x2="545" y2="20"/>
+                <line x1="40" y1="60" x2="545" y2="60"/>
+                <line x1="40" y1="100" x2="545" y2="100"/>
+                <line x1="40" y1="140" x2="545" y2="140"/>
+                <line x1="40" y1="170" x2="545" y2="170"/>
+              </g>
+              <g font-size="10" fill="#9aa7b8" font-family="sans-serif" text-anchor="end">
+                <text x="34" y="24">40.0°</text>
+                <text x="34" y="64">39.5°</text>
+                <text x="34" y="104">39.0°</text>
+                <text x="34" y="144">38.5°</text>
+                <text x="34" y="174">38.0°</text>
+              </g>
+              <g font-size="10" fill="#9aa7b8" font-family="sans-serif" text-anchor="middle">
+                <text x="70" y="192">Mon</text><text x="145" y="192">Tue</text><text x="220" y="192">Wed</text>
+                <text x="295" y="192">Thu</text><text x="370" y="192">Fri</text><text x="445" y="192">Sat</text><text x="520" y="192">Sun</text>
+              </g>
+              <rect x="40" y="112" width="505" height="46" fill="#e8f1fb" opacity="0.55"/>
+              <polyline fill="none" stroke="#0b66c3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+                points="70,138 108,132 145,140 183,135 220,142 258,136 295,130 320,120 345,70 370,38 395,88 420,126 445,134 483,138 520,133"/>
+              <circle cx="370" cy="38" r="5" fill="#d64545"/>
+              <g font-size="10" font-family="sans-serif">
+                <rect x="322" y="14" width="96" height="18" rx="9" fill="#fdeaea"/>
+                <text x="370" y="26" fill="#d64545" text-anchor="middle" font-weight="bold">Heat detected</text>
+              </g>
+            </svg>
+            <div class="legend">
+              <span><i style="background:#0b66c3"></i>Rumen temperature</span>
+              <span><i style="background:#e8f1fb"></i>Normal range</span>
+              <span><i style="background:#d64545"></i>Heat event</span>
+            </div>
+          </div>
+          <div class="chart-card">
+            <h5>Daily activity index (herd avg)</h5>
+            <svg viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bar chart of daily herd activity for seven days">
+              <g stroke="#e3e9f1" stroke-width="1">
+                <line x1="10" y1="30" x2="250" y2="30"/>
+                <line x1="10" y1="80" x2="250" y2="80"/>
+                <line x1="10" y1="130" x2="250" y2="130"/>
+                <line x1="10" y1="170" x2="250" y2="170"/>
+              </g>
+              <g fill="#0b66c3">
+                <rect x="22"  y="95"  width="20" height="75" rx="4"/>
+                <rect x="54"  y="85"  width="20" height="85" rx="4"/>
+                <rect x="86"  y="100" width="20" height="70" rx="4"/>
+                <rect x="118" y="78"  width="20" height="92" rx="4"/>
+                <rect x="150" y="42"  width="20" height="128" rx="4" fill="#d64545"/>
+                <rect x="182" y="90"  width="20" height="80" rx="4"/>
+                <rect x="214" y="96"  width="20" height="74" rx="4"/>
+              </g>
+              <g font-size="10" fill="#9aa7b8" font-family="sans-serif" text-anchor="middle">
+                <text x="32" y="186">M</text><text x="64" y="186">T</text><text x="96" y="186">W</text>
+                <text x="128" y="186">T</text><text x="160" y="186">F</text><text x="192" y="186">S</text><text x="224" y="186">S</text>
+              </g>
+            </svg>
+            <div class="legend">
+              <span><i style="background:#0b66c3"></i>Normal activity</span>
+              <span><i style="background:#d64545"></i>Heat-linked spike</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>In your pocket — alerts when they matter</h2>
+      <p>The same data, reshaped for tablet and phone. Push alerts reach you the moment BolusAI detects a heat event or a health anomaly.</p>
+    </div>
+
+    <div class="device-duo">
+      <div class="device device-tablet">
+        <div class="screen">
+          <div class="screen-title">Herd health — this week</div>
+          <div class="chart-row" style="grid-template-columns: 1fr 1.2fr;">
+            <div class="chart-card">
+              <h5>Status</h5>
+              <svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Donut chart showing 96 percent of the herd healthy">
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#e3e9f1" stroke-width="18"/>
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#2e9e5b" stroke-width="18"
+                        stroke-dasharray="313.6 326.7" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <circle cx="70" cy="70" r="52" fill="none" stroke="#d64545" stroke-width="18"
+                        stroke-dasharray="9.8 316.9" stroke-dashoffset="-313.6" transform="rotate(-90 70 70)"/>
+                <text x="70" y="66" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a2433" font-family="sans-serif">96%</text>
+                <text x="70" y="84" text-anchor="middle" font-size="10" fill="#5a6779" font-family="sans-serif">healthy</text>
+              </svg>
+              <div class="legend">
+                <span><i style="background:#2e9e5b"></i>Healthy 142</span>
+                <span><i style="background:#f2c94c"></i>Watch 4</span>
+                <span><i style="background:#d64545"></i>Alert 2</span>
+              </div>
+            </div>
+            <div class="chart-card">
+              <h5>Drinking events — Cow #103 (24h)</h5>
+              <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Area chart of drinking events over 24 hours">
+                <g stroke="#e3e9f1" stroke-width="1">
+                  <line x1="10" y1="30" x2="230" y2="30"/>
+                  <line x1="10" y1="70" x2="230" y2="70"/>
+                  <line x1="10" y1="110" x2="230" y2="110"/>
+                </g>
+                <path d="M10 120 L35 118 L60 95 L85 108 L110 62 L135 90 L160 48 L185 84 L210 100 L230 96 L230 130 L10 130 Z"
+                      fill="#e8f1fb"/>
+                <polyline fill="none" stroke="#0b66c3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+                  points="10,120 35,118 60,95 85,108 110,62 135,90 160,48 185,84 210,100 230,96"/>
+                <g font-size="9" fill="#9aa7b8" font-family="sans-serif" text-anchor="middle">
+                  <text x="15" y="145">00:00</text><text x="120" y="145">12:00</text><text x="225" y="145">24:00</text>
+                </g>
+              </svg>
+              <div class="legend"><span><i style="background:#0b66c3"></i>Rumen temperature drops = drinking</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="device device-phone">
+        <div class="screen">
+          <div class="screen-title">Alerts</div>
+          <div class="notif">
+            <div class="n-icon heat">🔥</div>
+            <div>
+              <h6>Heat detected — Cow #247</h6>
+              <p>Optimal insemination window: next 12–18 hours.</p>
+            </div>
+            <time>2m</time>
+          </div>
+          <div class="notif">
+            <div class="n-icon temp">🌡️</div>
+            <div>
+              <h6>Temperature rise — Cow #103</h6>
+              <p>+0.8°C above baseline for 6 hours. Possible early fever.</p>
+            </div>
+            <time>1h</time>
+          </div>
+          <div class="notif">
+            <div class="n-icon ok">✅</div>
+            <div>
+              <h6>Calving completed — Cow #188</h6>
+              <p>Temperature returned to normal range.</p>
+            </div>
+            <time>3h</time>
+          </div>
+          <div class="chart-card" style="margin-top:4px;">
+            <h5>Cow #247 — last 48h</h5>
+            <svg viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sparkline of temperature for the last 48 hours">
+              <rect x="0" y="38" width="220" height="30" fill="#e8f1fb" opacity="0.55"/>
+              <polyline fill="none" stroke="#0b66c3" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"
+                points="5,55 25,52 45,58 65,54 85,50 105,44 125,26 145,12 165,30 185,48 210,53"/>
+              <circle cx="145" cy="12" r="4" fill="#d64545"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Built for busy farmers</h2>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Any device, no installs</h3>
+        <p>The dashboard runs in any web browser and adapts automatically to phone, tablet or desktop. Nothing to download or update.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔔</div>
+        <h3>Alerts, not spreadsheets</h3>
+        <p>Our AI interprets the raw readings for you. You get a plain-language alert with a recommended action — not a wall of numbers.</p>
+      </div>
+      <div class="card">
+        <div class="icon">👥</div>
+        <h3>Share with your team</h3>
+        <p>Give your herdsman, vet or breeding advisor their own login so everyone sees the same live picture of the herd.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Want to see it live with your own herd?</h2>
+    <p>Book a demo and we'll walk you through the dashboard with real data from working farms.</p>
+    <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Book a demo</a>
+  </div>
+</section>
