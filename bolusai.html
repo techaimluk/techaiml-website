@@ -57,180 +57,227 @@ description: BolusAI is a smart rumen capsule (bolus) for cattle giving farmers 
   <div class="container">
     <div class="section-head">
       <h2>How the system works — end to end</h2>
-      <p>Enterprise-grade architecture, built for farms: ultra-low-power LoRaWAN from the capsule to a central farm gateway, encrypted internet uplink to the TechAIML cloud, and AI-driven dashboards and alerts on any device.</p>
+      <p>Enterprise-grade architecture, built for farms: ultra-low-power LoRaWAN from the capsule to mesh-linked farm gateways, encrypted internet uplink to the TechAIML cloud, and AI-driven dashboards and alerts on any device.</p>
     </div>
 
     <div style="background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); padding:22px; overflow-x:auto;">
-      <svg viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System architecture: BolusAI capsule in the cow sends data over LoRaWAN to a farm gateway, which connects over the internet to TechAIML servers where AI analysis produces dashboards and alerts on mobile, tablet and desktop" style="min-width:760px;">
+      <svg viewBox="0 0 1000 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System architecture: BolusAI capsules in cows send data over LoRaWAN to mesh-linked farm gateways, each covering around 500 metres. A gateway uplinks over the encrypted internet to TechAIML cloud servers, where AI analysis produces dashboards and alerts on mobile, tablet and desktop" style="min-width:760px;">
         <defs>
-          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
             <path d="M0 0 L10 5 L0 10 z" fill="#0b66c3"/>
           </marker>
         </defs>
 
-        <rect x="8" y="34" width="420" height="372" rx="14" fill="#f4f9f1" stroke="#dde8d8"/>
-        <rect x="448" y="34" width="264" height="372" rx="14" fill="#eef4fc" stroke="#d7e5f5"/>
-        <rect x="732" y="34" width="260" height="372" rx="14" fill="#ffffff" stroke="#e3e9f1"/>
+        <rect x="8" y="230" width="604" height="342" rx="14" fill="#f4f9f1" stroke="#dde8d8"/>
+        <rect x="648" y="16" width="344" height="230" rx="14" fill="#eef4fc" stroke="#d7e5f5"/>
+        <rect x="648" y="306" width="344" height="266" rx="14" fill="#ffffff" stroke="#e3e9f1"/>
 
         <g font-family="sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">
-          <text x="218" y="60" text-anchor="middle" fill="#4c7a45">ON THE FARM</text>
-          <text x="580" y="60" text-anchor="middle" fill="#0b66c3">TECHAIML CLOUD</text>
-          <text x="862" y="60" text-anchor="middle" fill="#5a6779">ANYWHERE</text>
+          <text x="310" y="258" text-anchor="middle" fill="#4c7a45">ON THE FARM</text>
+          <text x="820" y="42" text-anchor="middle" fill="#0b66c3">TECHAIML CLOUD</text>
+          <text x="820" y="332" text-anchor="middle" fill="#5a6779">ANYWHERE</text>
         </g>
 
         <g>
-          <ellipse cx="130" cy="330" rx="95" ry="10" fill="#dde8d8"/>
-          <rect x="62" y="215" width="140" height="78" rx="34" fill="#1a2433"/>
-          <circle cx="86" cy="233" r="15" fill="#ffffff"/>
-          <circle cx="112" cy="266" r="12" fill="#ffffff"/>
-          <circle cx="172" cy="272" r="11" fill="#ffffff"/>
-          <rect x="186" y="196" width="38" height="42" rx="17" fill="#1a2433"/>
-          <circle cx="214" cy="214" r="3" fill="#fff"/>
-          <path d="M190 194 q-6 -13 4 -16 q3 9 1 16z" fill="#1a2433"/>
-          <path d="M218 194 q8 -12 -1 -18 q-5 8 -3 18z" fill="#1a2433"/>
-          <rect x="74" y="290" width="11" height="34" rx="5" fill="#1a2433"/>
-          <rect x="104" y="292" width="11" height="32" rx="5" fill="#1a2433"/>
-          <rect x="148" y="292" width="11" height="32" rx="5" fill="#1a2433"/>
-          <rect x="175" y="290" width="11" height="34" rx="5" fill="#1a2433"/>
-          <path d="M62 240 q-16 3 -13 19 q8 3 13 -3z" fill="#1a2433"/>
-          <rect x="116" y="240" width="30" height="14" rx="7" fill="#0b66c3"/>
-          <circle cx="124" cy="247" r="3" fill="#fff"/>
-          <text x="130" y="360" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">BolusAI capsule</text>
-          <text x="130" y="376" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">in the rumen · years of battery life</text>
+          <circle cx="230" cy="420" r="118" fill="#dcecd8" opacity="0.45"/>
+          <circle cx="230" cy="420" r="118" fill="none" stroke="#4c9e45" stroke-dasharray="3 7" opacity="0.8"/>
+          <circle cx="472" cy="470" r="96" fill="#dcecd8" opacity="0.45"/>
+          <circle cx="472" cy="470" r="96" fill="none" stroke="#4c9e45" stroke-dasharray="3 7" opacity="0.8"/>
+          <text x="145" y="322" font-family="sans-serif" font-size="10" fill="#3d7a36" font-weight="bold">~500 m radius</text>
         </g>
 
+        <g>
+          <rect x="226" y="330" width="7" height="86" rx="3" fill="#8a97a8"/>
+          <rect x="212" y="410" width="36" height="22" rx="5" fill="#1a2433"/>
+          <circle cx="221" cy="421" r="3" fill="#5fc77e"/>
+          <path d="M229 332 l-15 -22 M229 332 l15 -22 M229 320 l-10 -15 M229 320 l10 -15" stroke="#8a97a8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="229" cy="303" r="4.5" fill="#0b66c3"/>
+          <text x="230" y="450" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1a2433">Gateway A</text>
+        </g>
+
+        <g>
+          <rect x="468" y="392" width="7" height="74" rx="3" fill="#8a97a8"/>
+          <rect x="454" y="460" width="36" height="22" rx="5" fill="#1a2433"/>
+          <circle cx="463" cy="471" r="3" fill="#5fc77e"/>
+          <path d="M471 394 l-14 -20 M471 394 l14 -20 M471 383 l-9 -13 M471 383 l9 -13" stroke="#8a97a8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="471" cy="368" r="4.5" fill="#0b66c3"/>
+          <text x="472" y="500" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1a2433">Gateway B</text>
+        </g>
+
+        <path d="M248 320 Q 360 300 458 372" stroke="#4c9e45" stroke-width="2.5" stroke-dasharray="7 6" fill="none" stroke-linecap="round"/>
+        <g font-family="sans-serif">
+          <rect x="300" y="296" width="110" height="20" rx="10" fill="#e4f1e2"/>
+          <text x="355" y="310" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#3d7a36">Gateway mesh</text>
+        </g>
+
+        <g>
+          <ellipse cx="105" cy="520" rx="72" ry="8" fill="#dde8d8"/>
+          <rect x="52" y="435" width="106" height="60" rx="26" fill="#1a2433"/>
+          <circle cx="72" cy="450" r="11" fill="#ffffff"/>
+          <circle cx="92" cy="475" r="9" fill="#ffffff"/>
+          <circle cx="136" cy="478" r="8" fill="#ffffff"/>
+          <rect x="146" y="420" width="29" height="33" rx="13" fill="#1a2433"/>
+          <circle cx="167" cy="434" r="2.5" fill="#fff"/>
+          <path d="M149 419 q-5 -10 3 -13 q3 7 1 13z" fill="#1a2433"/>
+          <path d="M171 419 q6 -9 -1 -14 q-4 6 -2 14z" fill="#1a2433"/>
+          <rect x="60" y="492" width="9" height="26" rx="4" fill="#1a2433"/>
+          <rect x="84" y="494" width="9" height="24" rx="4" fill="#1a2433"/>
+          <rect x="118" y="494" width="9" height="24" rx="4" fill="#1a2433"/>
+          <rect x="140" y="492" width="9" height="26" rx="4" fill="#1a2433"/>
+          <rect x="92" y="455" width="24" height="11" rx="5.5" fill="#0b66c3"/>
+          <text x="105" y="545" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1a2433">BolusAI capsule</text>
+          <text x="105" y="559" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#5a6779">in the rumen · years of battery life</text>
+        </g>
         <g stroke="#4c9e45" fill="none" stroke-linecap="round">
-          <path d="M165 226 q14 14 0 28" stroke-width="2.5"/>
-          <path d="M177 216 q22 24 0 48" stroke-width="2.5" opacity="0.75"/>
-          <path d="M189 206 q30 34 0 68" stroke-width="2.5" opacity="0.5"/>
+          <path d="M162 440 q10 10 0 20" stroke-width="2"/>
+          <path d="M171 433 q16 17 0 34" stroke-width="2" opacity="0.7"/>
         </g>
-        <path d="M205 240 q60 -40 116 -62" stroke="#4c9e45" stroke-width="2.5" stroke-dasharray="2 8" fill="none" stroke-linecap="round"/>
+        <path d="M180 440 Q 205 420 218 412" stroke="#4c9e45" stroke-width="2" stroke-dasharray="2 7" fill="none" stroke-linecap="round"/>
+
+        <g>
+          <ellipse cx="356" cy="530" rx="60" ry="7" fill="#dde8d8"/>
+          <rect x="314" y="462" width="86" height="50" rx="22" fill="#1a2433"/>
+          <circle cx="330" cy="474" r="9" fill="#ffffff"/>
+          <circle cx="348" cy="496" r="7" fill="#ffffff"/>
+          <circle cx="382" cy="496" r="7" fill="#ffffff"/>
+          <rect x="390" y="450" width="24" height="28" rx="11" fill="#1a2433"/>
+          <circle cx="407" cy="462" r="2" fill="#fff"/>
+          <rect x="322" y="508" width="8" height="21" rx="4" fill="#1a2433"/>
+          <rect x="342" y="510" width="8" height="19" rx="4" fill="#1a2433"/>
+          <rect x="370" y="510" width="8" height="19" rx="4" fill="#1a2433"/>
+          <rect x="388" y="508" width="8" height="21" rx="4" fill="#1a2433"/>
+          <rect x="346" y="478" width="20" height="9" rx="4.5" fill="#0b66c3"/>
+        </g>
+        <g stroke="#4c9e45" fill="none" stroke-linecap="round">
+          <path d="M404 466 q9 9 0 18" stroke-width="2"/>
+          <path d="M412 460 q14 15 0 30" stroke-width="2" opacity="0.7"/>
+        </g>
+        <path d="M420 466 Q 442 462 456 466" stroke="#4c9e45" stroke-width="2" stroke-dasharray="2 7" fill="none" stroke-linecap="round"/>
+
         <g font-family="sans-serif">
-          <rect x="196" y="128" width="120" height="20" rx="10" fill="#e4f1e2"/>
-          <text x="256" y="142" text-anchor="middle" font-size="11" font-weight="bold" fill="#3d7a36">LoRaWAN</text>
-          <text x="256" y="162" text-anchor="middle" font-size="10" fill="#5a6779">long range · ultra-low power</text>
+          <rect x="60" y="390" width="98" height="20" rx="10" fill="#e4f1e2"/>
+          <text x="109" y="404" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#3d7a36">LoRaWAN</text>
+          <text x="109" y="422" text-anchor="middle" font-size="9" fill="#5a6779">ultra-low power</text>
+        </g>
+
+        <text x="310" y="555" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">Each gateway covers ~500 m (aerial) — add gateways and they mesh to cover the whole farm</text>
+
+        <path d="M240 296 Q 400 130 640 120" stroke="#0b66c3" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow2)"/>
+        <g font-family="sans-serif">
+          <rect x="330" y="150" width="200" height="46" rx="10" fill="#eef4fc" stroke="#d7e5f5"/>
+          <text x="430" y="169" text-anchor="middle" font-size="11" font-weight="bold" fill="#0b66c3">Internet uplink</text>
+          <text x="430" y="186" text-anchor="middle" font-size="9.5" fill="#5a6779">Ethernet / 4G · TLS encrypted</text>
         </g>
 
         <g>
-          <rect x="352" y="130" width="8" height="170" rx="3" fill="#8a97a8"/>
-          <rect x="330" y="292" width="52" height="34" rx="6" fill="#1a2433"/>
-          <circle cx="342" cy="309" r="4" fill="#5fc77e"/>
-          <rect x="352" y="305" width="22" height="4" rx="2" fill="#5a6779"/>
-          <path d="M356 132 l-18 -26 M356 132 l18 -26 M356 118 l-12 -18 M356 118 l12 -18" stroke="#8a97a8" stroke-width="3" stroke-linecap="round" fill="none"/>
-          <circle cx="356" cy="100" r="5" fill="#0b66c3"/>
-          <text x="356" y="352" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">Farm gateway</text>
-          <text x="356" y="368" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">one per farm · covers every field</text>
-        </g>
-
-        <path d="M392 220 H 470" stroke="#0b66c3" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow)"/>
-        <g font-family="sans-serif">
-          <text x="430" y="200" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0b66c3">Internet</text>
-          <text x="430" y="245" text-anchor="middle" font-size="9.5" fill="#5a6779">Ethernet / 4G</text>
-          <text x="430" y="258" text-anchor="middle" font-size="9.5" fill="#5a6779">TLS encrypted</text>
-        </g>
-
-        <g>
-          <ellipse cx="580" cy="150" rx="66" ry="30" fill="#dcebfa"/>
-          <ellipse cx="546" cy="138" rx="34" ry="22" fill="#dcebfa"/>
-          <ellipse cx="614" cy="136" rx="38" ry="24" fill="#dcebfa"/>
+          <ellipse cx="770" cy="88" rx="52" ry="24" fill="#dcebfa"/>
+          <ellipse cx="742" cy="78" rx="27" ry="17" fill="#dcebfa"/>
+          <ellipse cx="798" cy="76" rx="30" ry="19" fill="#dcebfa"/>
           <g>
-            <rect x="524" y="196" width="112" height="26" rx="6" fill="#1a2433"/>
-            <rect x="524" y="228" width="112" height="26" rx="6" fill="#1a2433"/>
-            <rect x="524" y="260" width="112" height="26" rx="6" fill="#1a2433"/>
-            <circle cx="538" cy="209" r="4" fill="#5fc77e"/>
-            <circle cx="538" cy="241" r="4" fill="#5fc77e"/>
-            <circle cx="538" cy="273" r="4" fill="#f2c94c"/>
-            <rect x="550" y="205" width="60" height="7" rx="3.5" fill="#3b4657"/>
-            <rect x="550" y="237" width="60" height="7" rx="3.5" fill="#3b4657"/>
-            <rect x="550" y="269" width="60" height="7" rx="3.5" fill="#3b4657"/>
+            <rect x="700" y="118" width="100" height="23" rx="6" fill="#1a2433"/>
+            <rect x="700" y="147" width="100" height="23" rx="6" fill="#1a2433"/>
+            <rect x="700" y="176" width="100" height="23" rx="6" fill="#1a2433"/>
+            <circle cx="713" cy="129" r="3.5" fill="#5fc77e"/>
+            <circle cx="713" cy="158" r="3.5" fill="#5fc77e"/>
+            <circle cx="713" cy="187" r="3.5" fill="#f2c94c"/>
+            <rect x="724" y="126" width="52" height="6" rx="3" fill="#3b4657"/>
+            <rect x="724" y="155" width="52" height="6" rx="3" fill="#3b4657"/>
+            <rect x="724" y="184" width="52" height="6" rx="3" fill="#3b4657"/>
           </g>
           <g>
-            <rect x="596" y="292" width="44" height="44" rx="8" fill="#0b66c3"/>
-            <text x="618" y="320" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff">AI</text>
+            <rect x="836" y="128" width="42" height="42" rx="8" fill="#0b66c3"/>
+            <text x="857" y="155" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff">AI</text>
             <g stroke="#0b66c3" stroke-width="2.5" stroke-linecap="round">
-              <path d="M604 292 v-8 M618 292 v-8 M632 292 v-8 M604 336 v8 M618 336 v8 M632 336 v8"/>
-              <path d="M596 300 h-8 M596 314 h-8 M596 328 h-8 M640 300 h8 M640 314 h8 M640 328 h8"/>
+              <path d="M844 128 v-7 M857 128 v-7 M870 128 v-7 M844 170 v7 M857 170 v7 M870 170 v7"/>
+              <path d="M836 136 h-7 M836 149 h-7 M836 162 h-7 M878 136 h7 M878 149 h7 M878 162 h7"/>
             </g>
           </g>
-          <text x="580" y="374" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">TechAIML servers</text>
-          <text x="580" y="390" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">data analysis · AI models · alert engine</text>
+          <text x="820" y="222" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1a2433">TechAIML servers</text>
+          <text x="820" y="237" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#5a6779">data analysis · AI models · alert engine</text>
         </g>
 
-        <path d="M714 220 H 760" stroke="#0b66c3" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow)"/>
+        <path d="M820 250 V 298" stroke="#0b66c3" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow2)"/>
+        <text x="905" y="278" text-anchor="middle" font-family="sans-serif" font-size="9.5" fill="#5a6779">alerts &amp; dashboards</text>
 
         <g>
-          <rect x="800" y="96" width="120" height="72" rx="6" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
-          <rect x="788" y="168" width="144" height="9" rx="4" fill="#1a2433"/>
-          <polyline points="812,148 830,124 846,138 866,110" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="878" y="104" width="34" height="10" rx="5" fill="#dcebfa"/>
-          <rect x="878" y="120" width="34" height="10" rx="5" fill="#dcebfa"/>
-          <rect x="790" y="206" width="86" height="112" rx="9" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
-          <rect x="800" y="220" width="66" height="8" rx="4" fill="#dcebfa"/>
-          <rect x="800" y="234" width="66" height="8" rx="4" fill="#dcebfa"/>
-          <polyline points="802,296 818,272 832,282 850,258" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="896" y="222" width="54" height="96" rx="10" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
-          <rect x="905" y="240" width="36" height="8" rx="4" fill="#dcebfa"/>
-          <rect x="905" y="254" width="36" height="8" rx="4" fill="#dcebfa"/>
-          <circle cx="923" cy="292" r="11" fill="#e8f1fb"/>
-          <path d="M918 292 l4 4 l7 -9" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="948" cy="226" r="11" fill="#d64545"/>
-          <text x="948" y="230.5" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff">2</text>
-          <text x="862" y="352" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">Dashboards &amp; alerts</text>
-          <text x="862" y="368" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">mobile · tablet · desktop</text>
+          <rect x="682" y="356" width="112" height="66" rx="6" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
+          <rect x="670" y="422" width="136" height="9" rx="4" fill="#1a2433"/>
+          <polyline points="694,404 710,382 724,394 742,368" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="754" y="364" width="32" height="9" rx="4.5" fill="#dcebfa"/>
+          <rect x="754" y="379" width="32" height="9" rx="4.5" fill="#dcebfa"/>
+          <rect x="676" y="452" width="80" height="104" rx="9" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
+          <rect x="686" y="465" width="60" height="8" rx="4" fill="#dcebfa"/>
+          <rect x="686" y="478" width="60" height="8" rx="4" fill="#dcebfa"/>
+          <polyline points="688,536 703,514 716,523 733,501" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="876" y="440" width="52" height="92" rx="10" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
+          <rect x="885" y="457" width="34" height="8" rx="4" fill="#dcebfa"/>
+          <rect x="885" y="470" width="34" height="8" rx="4" fill="#dcebfa"/>
+          <circle cx="902" cy="507" r="10" fill="#e8f1fb"/>
+          <path d="M897 507 l4 4 l6 -8" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="926" cy="444" r="10" fill="#d64545"/>
+          <text x="926" y="448.5" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="#fff">2</text>
+          <text x="820" y="562" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">mobile · tablet · desktop</text>
         </g>
       </svg>
     </div>
 
     <div class="feature-row">
       <div class="hero-art">
-        <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Farm coverage illustration: one central gateway with LoRaWAN range rings covering barns, fields and grazing cattle">
-          <circle cx="210" cy="160" r="150" fill="#eaf4e8" opacity="0.6"/>
-          <circle cx="210" cy="160" r="105" fill="#dcecd8" opacity="0.6"/>
-          <circle cx="210" cy="160" r="60" fill="#cfe4ca" opacity="0.6"/>
-          <g stroke="#4c9e45" stroke-dasharray="3 7" fill="none" opacity="0.8">
-            <circle cx="210" cy="160" r="150"/>
-            <circle cx="210" cy="160" r="105"/>
-            <circle cx="210" cy="160" r="60"/>
-          </g>
-          <rect x="206" y="120" width="7" height="60" rx="3" fill="#8a97a8"/>
-          <path d="M209 122 l-13 -19 M209 122 l13 -19 M209 112 l-9 -13 M209 112 l9 -13" stroke="#8a97a8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-          <circle cx="209" cy="99" r="4" fill="#0b66c3"/>
-          <rect x="196" y="176" width="28" height="18" rx="4" fill="#1a2433"/>
-          <circle cx="203" cy="185" r="2.5" fill="#5fc77e"/>
+        <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Farm coverage illustration: multiple mesh-linked gateways, each with a coverage ring of about 500 metres, covering barns, fields and grazing cattle">
+          <circle cx="150" cy="140" r="105" fill="#dcecd8" opacity="0.5"/>
+          <circle cx="150" cy="140" r="105" fill="none" stroke="#4c9e45" stroke-dasharray="3 7" opacity="0.8"/>
+          <circle cx="290" cy="200" r="95" fill="#dcecd8" opacity="0.5"/>
+          <circle cx="290" cy="200" r="95" fill="none" stroke="#4c9e45" stroke-dasharray="3 7" opacity="0.8"/>
+          <text x="66" y="52" font-family="sans-serif" font-size="10" font-weight="bold" fill="#3d7a36">~500 m</text>
+          <text x="352" y="120" font-family="sans-serif" font-size="10" font-weight="bold" fill="#3d7a36">~500 m</text>
+          <rect x="147" y="112" width="6" height="46" rx="3" fill="#8a97a8"/>
+          <path d="M150 114 l-11 -16 M150 114 l11 -16 M150 106 l-8 -11 M150 106 l8 -11" stroke="#8a97a8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="150" cy="94" r="3.5" fill="#0b66c3"/>
+          <rect x="138" y="154" width="24" height="15" rx="4" fill="#1a2433"/>
+          <circle cx="144" cy="161" r="2" fill="#5fc77e"/>
+          <rect x="287" y="176" width="6" height="42" rx="3" fill="#8a97a8"/>
+          <path d="M290 178 l-10 -15 M290 178 l10 -15 M290 170 l-7 -10 M290 170 l7 -10" stroke="#8a97a8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="290" cy="159" r="3.5" fill="#0b66c3"/>
+          <rect x="278" y="214" width="24" height="15" rx="4" fill="#1a2433"/>
+          <circle cx="284" cy="221" r="2" fill="#5fc77e"/>
+          <path d="M158 100 Q 220 110 282 164" stroke="#4c9e45" stroke-width="2.5" stroke-dasharray="7 6" fill="none" stroke-linecap="round"/>
+          <rect x="178" y="98" width="88" height="18" rx="9" fill="#e4f1e2"/>
+          <text x="222" y="111" text-anchor="middle" font-family="sans-serif" font-size="9.5" font-weight="bold" fill="#3d7a36">mesh link</text>
           <g>
-            <rect x="86" y="106" width="44" height="26" fill="#c96a4a"/>
-            <polygon points="82,106 134,106 108,88" fill="#a84f33"/>
-            <rect x="102" y="118" width="12" height="14" fill="#7d3a25"/>
+            <rect x="66" y="180" width="40" height="24" fill="#c96a4a"/>
+            <polygon points="62,180 110,180 86,164" fill="#a84f33"/>
+            <rect x="80" y="191" width="11" height="13" fill="#7d3a25"/>
           </g>
           <g>
-            <rect x="292" y="212" width="44" height="26" fill="#c96a4a"/>
-            <polygon points="288,212 340,212 314,194" fill="#a84f33"/>
-            <rect x="308" y="224" width="12" height="14" fill="#7d3a25"/>
+            <rect x="318" y="242" width="40" height="24" fill="#c96a4a"/>
+            <polygon points="314,242 362,242 338,226" fill="#a84f33"/>
+            <rect x="332" y="253" width="11" height="13" fill="#7d3a25"/>
           </g>
           <g fill="#1a2433">
-            <ellipse cx="130" cy="212" rx="13" ry="8"/>
-            <ellipse cx="168" cy="248" rx="13" ry="8"/>
-            <ellipse cx="268" cy="120" rx="13" ry="8"/>
-            <ellipse cx="306" cy="152" rx="13" ry="8"/>
-            <ellipse cx="96" cy="164" rx="13" ry="8"/>
-            <ellipse cx="238" cy="256" rx="13" ry="8"/>
+            <ellipse cx="112" cy="126" rx="12" ry="7.5"/>
+            <ellipse cx="188" cy="196" rx="12" ry="7.5"/>
+            <ellipse cx="238" cy="150" rx="12" ry="7.5"/>
+            <ellipse cx="318" cy="176" rx="12" ry="7.5"/>
+            <ellipse cx="256" cy="252" rx="12" ry="7.5"/>
+            <ellipse cx="130" cy="230" rx="12" ry="7.5"/>
           </g>
           <g fill="#0b66c3">
-            <circle cx="130" cy="209" r="2.5"/><circle cx="168" cy="245" r="2.5"/><circle cx="268" cy="117" r="2.5"/>
-            <circle cx="306" cy="149" r="2.5"/><circle cx="96" cy="161" r="2.5"/><circle cx="238" cy="253" r="2.5"/>
+            <circle cx="112" cy="123" r="2.3"/><circle cx="188" cy="193" r="2.3"/><circle cx="238" cy="147" r="2.3"/>
+            <circle cx="318" cy="173" r="2.3"/><circle cx="256" cy="249" r="2.3"/><circle cx="130" cy="227" r="2.3"/>
           </g>
-          <text x="210" y="304" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">One gateway, whole-farm coverage</text>
+          <text x="210" y="304" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">Gateways mesh together to cover the whole farm</text>
         </svg>
       </div>
       <div class="text">
         <h2>Why LoRaWAN?</h2>
         <p>We chose LoRaWAN because it's the proven industry standard for large-scale, low-power IoT — ideal for working farms.</p>
         <ul>
-          <li><strong>Kilometres of range</strong> — a single central gateway covers barns, parlours and grazing fields alike</li>
+          <li><strong>~500 m coverage per gateway</strong> — aerial radius from a centrally mounted gateway, covering barns, yards and paddocks</li>
+          <li><strong>Mesh networking</strong> — add gateways and they link together, extending coverage across larger farms and remote fields</li>
           <li><strong>Ultra-low power</strong> — the capsule transmits for years without a battery change</li>
-          <li><strong>Scales with your herd</strong> — one gateway handles thousands of capsules</li>
+          <li><strong>Scales with your herd</strong> — each gateway handles thousands of capsules</li>
           <li><strong>Secure by design</strong> — end-to-end encryption from capsule to cloud</li>
-          <li><strong>Resilient</strong> — the gateway buffers data locally if the internet connection drops</li>
+          <li><strong>Resilient</strong> — gateways buffer data locally if the internet connection drops</li>
         </ul>
       </div>
     </div>
