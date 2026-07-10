@@ -1,0 +1,22 @@
+title: TechAIML
+tagline: Smart IoT Solutions for Agriculture
+description: >-
+  TechAIML Ltd provides Internet of Things technology services for agriculture,
+  including BolusAI — a smart rumen capsule for early heat detection and
+  continuous health monitoring in cattle.
+url: "https://www.techaiml.co.uk"
+baseurl: ""
+lang: en-GB
+author: TechAIML Ltd
+email: techaimluk@gmail.com
+
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
