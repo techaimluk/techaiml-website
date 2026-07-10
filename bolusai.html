@@ -56,6 +56,190 @@ description: BolusAI is a smart rumen capsule (bolus) for cattle giving farmers 
 <section class="section alt">
   <div class="container">
     <div class="section-head">
+      <h2>How the system works — end to end</h2>
+      <p>Enterprise-grade architecture, built for farms: ultra-low-power LoRaWAN from the capsule to a central farm gateway, encrypted internet uplink to the TechAIML cloud, and AI-driven dashboards and alerts on any device.</p>
+    </div>
+
+    <div style="background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); padding:22px; overflow-x:auto;">
+      <svg viewBox="0 0 1000 430" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="System architecture: BolusAI capsule in the cow sends data over LoRaWAN to a farm gateway, which connects over the internet to TechAIML servers where AI analysis produces dashboards and alerts on mobile, tablet and desktop" style="min-width:760px;">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="#0b66c3"/>
+          </marker>
+        </defs>
+
+        <rect x="8" y="34" width="420" height="372" rx="14" fill="#f4f9f1" stroke="#dde8d8"/>
+        <rect x="448" y="34" width="264" height="372" rx="14" fill="#eef4fc" stroke="#d7e5f5"/>
+        <rect x="732" y="34" width="260" height="372" rx="14" fill="#ffffff" stroke="#e3e9f1"/>
+
+        <g font-family="sans-serif" font-size="12" font-weight="bold" letter-spacing="1.5">
+          <text x="218" y="60" text-anchor="middle" fill="#4c7a45">ON THE FARM</text>
+          <text x="580" y="60" text-anchor="middle" fill="#0b66c3">TECHAIML CLOUD</text>
+          <text x="862" y="60" text-anchor="middle" fill="#5a6779">ANYWHERE</text>
+        </g>
+
+        <g>
+          <ellipse cx="130" cy="330" rx="95" ry="10" fill="#dde8d8"/>
+          <rect x="62" y="215" width="140" height="78" rx="34" fill="#1a2433"/>
+          <circle cx="86" cy="233" r="15" fill="#ffffff"/>
+          <circle cx="112" cy="266" r="12" fill="#ffffff"/>
+          <circle cx="172" cy="272" r="11" fill="#ffffff"/>
+          <rect x="186" y="196" width="38" height="42" rx="17" fill="#1a2433"/>
+          <circle cx="214" cy="214" r="3" fill="#fff"/>
+          <path d="M190 194 q-6 -13 4 -16 q3 9 1 16z" fill="#1a2433"/>
+          <path d="M218 194 q8 -12 -1 -18 q-5 8 -3 18z" fill="#1a2433"/>
+          <rect x="74" y="290" width="11" height="34" rx="5" fill="#1a2433"/>
+          <rect x="104" y="292" width="11" height="32" rx="5" fill="#1a2433"/>
+          <rect x="148" y="292" width="11" height="32" rx="5" fill="#1a2433"/>
+          <rect x="175" y="290" width="11" height="34" rx="5" fill="#1a2433"/>
+          <path d="M62 240 q-16 3 -13 19 q8 3 13 -3z" fill="#1a2433"/>
+          <rect x="116" y="240" width="30" height="14" rx="7" fill="#0b66c3"/>
+          <circle cx="124" cy="247" r="3" fill="#fff"/>
+          <text x="130" y="360" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">BolusAI capsule</text>
+          <text x="130" y="376" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">in the rumen · years of battery life</text>
+        </g>
+
+        <g stroke="#4c9e45" fill="none" stroke-linecap="round">
+          <path d="M165 226 q14 14 0 28" stroke-width="2.5"/>
+          <path d="M177 216 q22 24 0 48" stroke-width="2.5" opacity="0.75"/>
+          <path d="M189 206 q30 34 0 68" stroke-width="2.5" opacity="0.5"/>
+        </g>
+        <path d="M205 240 q60 -40 116 -62" stroke="#4c9e45" stroke-width="2.5" stroke-dasharray="2 8" fill="none" stroke-linecap="round"/>
+        <g font-family="sans-serif">
+          <rect x="196" y="128" width="120" height="20" rx="10" fill="#e4f1e2"/>
+          <text x="256" y="142" text-anchor="middle" font-size="11" font-weight="bold" fill="#3d7a36">LoRaWAN</text>
+          <text x="256" y="162" text-anchor="middle" font-size="10" fill="#5a6779">long range · ultra-low power</text>
+        </g>
+
+        <g>
+          <rect x="352" y="130" width="8" height="170" rx="3" fill="#8a97a8"/>
+          <rect x="330" y="292" width="52" height="34" rx="6" fill="#1a2433"/>
+          <circle cx="342" cy="309" r="4" fill="#5fc77e"/>
+          <rect x="352" y="305" width="22" height="4" rx="2" fill="#5a6779"/>
+          <path d="M356 132 l-18 -26 M356 132 l18 -26 M356 118 l-12 -18 M356 118 l12 -18" stroke="#8a97a8" stroke-width="3" stroke-linecap="round" fill="none"/>
+          <circle cx="356" cy="100" r="5" fill="#0b66c3"/>
+          <text x="356" y="352" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">Farm gateway</text>
+          <text x="356" y="368" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">one per farm · covers every field</text>
+        </g>
+
+        <path d="M392 220 H 470" stroke="#0b66c3" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow)"/>
+        <g font-family="sans-serif">
+          <text x="430" y="200" text-anchor="middle" font-size="10.5" font-weight="bold" fill="#0b66c3">Internet</text>
+          <text x="430" y="245" text-anchor="middle" font-size="9.5" fill="#5a6779">Ethernet / 4G</text>
+          <text x="430" y="258" text-anchor="middle" font-size="9.5" fill="#5a6779">TLS encrypted</text>
+        </g>
+
+        <g>
+          <ellipse cx="580" cy="150" rx="66" ry="30" fill="#dcebfa"/>
+          <ellipse cx="546" cy="138" rx="34" ry="22" fill="#dcebfa"/>
+          <ellipse cx="614" cy="136" rx="38" ry="24" fill="#dcebfa"/>
+          <g>
+            <rect x="524" y="196" width="112" height="26" rx="6" fill="#1a2433"/>
+            <rect x="524" y="228" width="112" height="26" rx="6" fill="#1a2433"/>
+            <rect x="524" y="260" width="112" height="26" rx="6" fill="#1a2433"/>
+            <circle cx="538" cy="209" r="4" fill="#5fc77e"/>
+            <circle cx="538" cy="241" r="4" fill="#5fc77e"/>
+            <circle cx="538" cy="273" r="4" fill="#f2c94c"/>
+            <rect x="550" y="205" width="60" height="7" rx="3.5" fill="#3b4657"/>
+            <rect x="550" y="237" width="60" height="7" rx="3.5" fill="#3b4657"/>
+            <rect x="550" y="269" width="60" height="7" rx="3.5" fill="#3b4657"/>
+          </g>
+          <g>
+            <rect x="596" y="292" width="44" height="44" rx="8" fill="#0b66c3"/>
+            <text x="618" y="320" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#fff">AI</text>
+            <g stroke="#0b66c3" stroke-width="2.5" stroke-linecap="round">
+              <path d="M604 292 v-8 M618 292 v-8 M632 292 v-8 M604 336 v8 M618 336 v8 M632 336 v8"/>
+              <path d="M596 300 h-8 M596 314 h-8 M596 328 h-8 M640 300 h8 M640 314 h8 M640 328 h8"/>
+            </g>
+          </g>
+          <text x="580" y="374" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">TechAIML servers</text>
+          <text x="580" y="390" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">data analysis · AI models · alert engine</text>
+        </g>
+
+        <path d="M714 220 H 760" stroke="#0b66c3" stroke-width="2.5" stroke-dasharray="6 6" fill="none" marker-end="url(#arrow)"/>
+
+        <g>
+          <rect x="800" y="96" width="120" height="72" rx="6" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
+          <rect x="788" y="168" width="144" height="9" rx="4" fill="#1a2433"/>
+          <polyline points="812,148 830,124 846,138 866,110" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="878" y="104" width="34" height="10" rx="5" fill="#dcebfa"/>
+          <rect x="878" y="120" width="34" height="10" rx="5" fill="#dcebfa"/>
+          <rect x="790" y="206" width="86" height="112" rx="9" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
+          <rect x="800" y="220" width="66" height="8" rx="4" fill="#dcebfa"/>
+          <rect x="800" y="234" width="66" height="8" rx="4" fill="#dcebfa"/>
+          <polyline points="802,296 818,272 832,282 850,258" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="896" y="222" width="54" height="96" rx="10" fill="#fff" stroke="#0b66c3" stroke-width="2.5"/>
+          <rect x="905" y="240" width="36" height="8" rx="4" fill="#dcebfa"/>
+          <rect x="905" y="254" width="36" height="8" rx="4" fill="#dcebfa"/>
+          <circle cx="923" cy="292" r="11" fill="#e8f1fb"/>
+          <path d="M918 292 l4 4 l7 -9" stroke="#0b66c3" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="948" cy="226" r="11" fill="#d64545"/>
+          <text x="948" y="230.5" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff">2</text>
+          <text x="862" y="352" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">Dashboards &amp; alerts</text>
+          <text x="862" y="368" text-anchor="middle" font-family="sans-serif" font-size="10.5" fill="#5a6779">mobile · tablet · desktop</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="feature-row">
+      <div class="hero-art">
+        <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Farm coverage illustration: one central gateway with LoRaWAN range rings covering barns, fields and grazing cattle">
+          <circle cx="210" cy="160" r="150" fill="#eaf4e8" opacity="0.6"/>
+          <circle cx="210" cy="160" r="105" fill="#dcecd8" opacity="0.6"/>
+          <circle cx="210" cy="160" r="60" fill="#cfe4ca" opacity="0.6"/>
+          <g stroke="#4c9e45" stroke-dasharray="3 7" fill="none" opacity="0.8">
+            <circle cx="210" cy="160" r="150"/>
+            <circle cx="210" cy="160" r="105"/>
+            <circle cx="210" cy="160" r="60"/>
+          </g>
+          <rect x="206" y="120" width="7" height="60" rx="3" fill="#8a97a8"/>
+          <path d="M209 122 l-13 -19 M209 122 l13 -19 M209 112 l-9 -13 M209 112 l9 -13" stroke="#8a97a8" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+          <circle cx="209" cy="99" r="4" fill="#0b66c3"/>
+          <rect x="196" y="176" width="28" height="18" rx="4" fill="#1a2433"/>
+          <circle cx="203" cy="185" r="2.5" fill="#5fc77e"/>
+          <g>
+            <rect x="86" y="106" width="44" height="26" fill="#c96a4a"/>
+            <polygon points="82,106 134,106 108,88" fill="#a84f33"/>
+            <rect x="102" y="118" width="12" height="14" fill="#7d3a25"/>
+          </g>
+          <g>
+            <rect x="292" y="212" width="44" height="26" fill="#c96a4a"/>
+            <polygon points="288,212 340,212 314,194" fill="#a84f33"/>
+            <rect x="308" y="224" width="12" height="14" fill="#7d3a25"/>
+          </g>
+          <g fill="#1a2433">
+            <ellipse cx="130" cy="212" rx="13" ry="8"/>
+            <ellipse cx="168" cy="248" rx="13" ry="8"/>
+            <ellipse cx="268" cy="120" rx="13" ry="8"/>
+            <ellipse cx="306" cy="152" rx="13" ry="8"/>
+            <ellipse cx="96" cy="164" rx="13" ry="8"/>
+            <ellipse cx="238" cy="256" rx="13" ry="8"/>
+          </g>
+          <g fill="#0b66c3">
+            <circle cx="130" cy="209" r="2.5"/><circle cx="168" cy="245" r="2.5"/><circle cx="268" cy="117" r="2.5"/>
+            <circle cx="306" cy="149" r="2.5"/><circle cx="96" cy="161" r="2.5"/><circle cx="238" cy="253" r="2.5"/>
+          </g>
+          <text x="210" y="304" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1a2433">One gateway, whole-farm coverage</text>
+        </svg>
+      </div>
+      <div class="text">
+        <h2>Why LoRaWAN?</h2>
+        <p>We chose LoRaWAN because it's the proven industry standard for large-scale, low-power IoT — ideal for working farms.</p>
+        <ul>
+          <li><strong>Kilometres of range</strong> — a single central gateway covers barns, parlours and grazing fields alike</li>
+          <li><strong>Ultra-low power</strong> — the capsule transmits for years without a battery change</li>
+          <li><strong>Scales with your herd</strong> — one gateway handles thousands of capsules</li>
+          <li><strong>Secure by design</strong> — end-to-end encryption from capsule to cloud</li>
+          <li><strong>Resilient</strong> — the gateway buffers data locally if the internet connection drops</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
       <h2>What BolusAI gives you</h2>
     </div>
     <div class="card-grid">
@@ -93,7 +277,7 @@ description: BolusAI is a smart rumen capsule (bolus) for cattle giving farmers 
   </div>
 </section>
 
-<section class="section">
+<section class="section alt">
   <div class="container prose">
     <h2>Who is it for?</h2>
     <p>BolusAI is designed for dairy and beef farmers who want reliable, low-effort insight into every animal — whether you run 40 cows or 4,000. It's equally valuable for vets and breeding professionals who need accurate data to support their decisions.</p>
