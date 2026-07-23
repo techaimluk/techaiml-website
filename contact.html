@@ -5,6 +5,24 @@ permalink: /contact/
 description: Get in touch with TechAIML — request a BolusAI demo, a consultation or a personalised proposal for your farm.
 ---
 
+<style>
+  .card-prefill {
+    display: block; width: 100%; text-align: left; cursor: pointer;
+    font: inherit; color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  .card-prefill:hover, .card-prefill:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--blue);
+    box-shadow: 0 10px 30px rgba(11,102,195,0.16);
+    outline: none;
+  }
+  .card-prefill .card-cta {
+    display: inline-block; margin-top: 12px; font-weight: 600; font-size: 0.9rem;
+    color: var(--blue);
+  }
+</style>
+
 <section class="page-head">
   <div class="container">
     <h1>Contact us</h1>
@@ -25,6 +43,9 @@ description: Get in touch with TechAIML — request a BolusAI demo, a consultati
         <label for="farm">Farm / organisation (optional)</label>
         <input type="text" id="farm" name="farm">
 
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="_subject" placeholder="What's your enquiry about?">
+
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="6" required placeholder="Tell us about your herd, your goals, or what you'd like to know..."></textarea>
 
@@ -39,21 +60,31 @@ description: Get in touch with TechAIML — request a BolusAI demo, a consultati
       </div>
     </div>
     <div class="contact-side">
-      <div class="card">
+      <p style="color:var(--grey); font-size:0.92rem; margin-bottom:6px;">Not sure where to start? Pick a topic and we'll fill in the message for you:</p>
+      <button type="button" class="card card-prefill" role="button"
+        data-subject="BolusAI demo request"
+        data-message="I'd like to request a BolusAI demo. My herd size is [please add], and I'd like to understand how early heat detection and health monitoring could work for us. Please prepare a personalised walkthrough and proposal.">
         <div class="icon">🐄</div>
         <h3>Request a BolusAI demo</h3>
         <p>Mention your herd size and we'll prepare a personalised walkthrough and proposal.</p>
-      </div>
-      <div class="card">
+        <span class="card-cta">Use this message →</span>
+      </button>
+      <button type="button" class="card card-prefill" role="button"
+        data-subject="IoT consultation enquiry"
+        data-message="I'd like an IoT consultation for my farm. What I'd most like to improve is [please add]. Could you suggest a practical starting point and how your solutions might help?">
         <div class="icon">🛠️</div>
         <h3>IoT consultation</h3>
         <p>Tell us what you'd like to improve on your farm and we'll suggest a practical starting point.</p>
-      </div>
-      <div class="card">
+        <span class="card-cta">Use this message →</span>
+      </button>
+      <button type="button" class="card card-prefill" role="button"
+        data-subject="Partnership enquiry"
+        data-message="I'm interested in partnering with TechAIML. We are a [vet practice / breeding company / distributor / other — please specify] and would like to explore how we could work together.">
         <div class="icon">🤝</div>
         <h3>Partnerships</h3>
         <p>Vet practice, breeding company or distributor? We're always open to working with the best in the industry.</p>
-      </div>
+        <span class="card-cta">Use this message →</span>
+      </button>
     </div>
   </div>
 </section>
@@ -63,6 +94,19 @@ description: Get in touch with TechAIML — request a BolusAI demo, a consultati
     var form = document.getElementById('contact-form');
     var success = document.getElementById('form-success');
     var errorMsg = document.getElementById('form-error');
+    var subjectField = document.getElementById('subject');
+    var messageField = document.getElementById('message');
+
+    // Clicking a topic card pre-fills the subject and message, then focuses the form
+    document.querySelectorAll('.card-prefill').forEach(function (card) {
+      card.addEventListener('click', function () {
+        subjectField.value = card.getAttribute('data-subject');
+        messageField.value = card.getAttribute('data-message');
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        messageField.focus();
+        messageField.setSelectionRange(messageField.value.length, messageField.value.length);
+      });
+    });
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
