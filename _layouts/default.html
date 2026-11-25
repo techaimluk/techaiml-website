@@ -23,6 +23,7 @@
         <a href="{{ '/bolusai/' | relative_url }}" {% if page.url contains '/bolusai' %}class="active"{% endif %}>BolusAI</a>
         <a href="{{ '/dashboard/' | relative_url }}" {% if page.url contains '/dashboard' %}class="active"{% endif %}>Dashboard</a>
         <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about' %}class="active"{% endif %}>About</a>
+        <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' or page.layout == 'post' %}class="active"{% endif %}>Blog</a>
         <a href="{{ '/contact/' | relative_url }}" class="nav-cta">Contact us</a>
       </nav>
     </div>
@@ -44,6 +45,7 @@
         <a href="{{ '/bolusai/' | relative_url }}">BolusAI</a>
         <a href="{{ '/dashboard/' | relative_url }}">Dashboard</a>
         <a href="{{ '/about/' | relative_url }}">About us</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
         <a href="{{ '/contact/' | relative_url }}">Contact</a>
       </div>
       <div>
