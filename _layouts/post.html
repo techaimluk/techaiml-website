@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section class="page-head">
+  <div class="container">
+    <p style="margin-bottom:8px;"><a href="{{ '/blog/' | relative_url }}">← Blog</a></p>
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.date | date: "%-d %B %Y" }}{% if page.author %} · {{ page.author }}{% endif %}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container prose">
+    {{ content }}
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Want to talk about applied AI?</h2>
+    <p>We build IoT and AI solutions that turn data into decisions. We'd love to hear about your project.</p>
+    <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Contact us</a>
+  </div>
+</section>
