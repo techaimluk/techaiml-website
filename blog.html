@@ -1,0 +1,32 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+description: News, insights and practical examples of applied IoT and AI from TechAIML.
+---
+
+<section class="page-head">
+  <div class="container">
+    <h1>Blog</h1>
+    <p>News, insights and practical examples of applied IoT and AI.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% if site.posts.size > 0 %}
+    <div class="card-grid">
+      {% for post in site.posts %}
+      <a class="card" href="{{ post.url | relative_url }}" style="text-decoration:none;color:inherit;">
+        <p style="color:var(--grey);font-size:0.9rem;margin-bottom:6px;">{{ post.date | date: "%-d %B %Y" }}</p>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 30 }}</p>
+        <p style="margin-top:12px;color:var(--blue);font-weight:600;">Read more →</p>
+      </a>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p>No posts yet — check back soon.</p>
+    {% endif %}
+  </div>
+</section>
